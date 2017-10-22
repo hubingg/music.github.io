@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8d087ea5a047557ecde4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8f735bfb3717bf39e12c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8536,6 +8536,10 @@
 
 	var _songDetail2 = _interopRequireDefault(_songDetail);
 
+	var _singerList = __webpack_require__(290);
+
+	var _singerList2 = _interopRequireDefault(_singerList);
+
 	__webpack_require__(269);
 
 	__webpack_require__(273);
@@ -8573,7 +8577,7 @@
 
 	//3.0 定义路由规则对象
 	var router = new _vueRouter2.default({
-		routes: [{ name: 'ranking', path: '/ranking', component: _ranking2.default }, { name: 'singer', path: '/singer', component: _singer2.default }, { name: 'recommend', path: '/recommend', component: _recommend2.default }, { name: 'radioStation', path: '/radioStation', component: _radioStation2.default }, { name: 'songDetail', path: '/ranking/songDetail/:topid', component: _songDetail2.default }]
+		routes: [{ name: 'ranking', path: '/ranking', component: _ranking2.default }, { name: 'singer', path: '/singer', component: _singer2.default }, { name: 'singerList', path: '/singer/list', component: _singerList2.default }, { name: 'recommend', path: '/recommend', component: _recommend2.default }, { name: 'radioStation', path: '/radioStation', component: _radioStation2.default }, { name: 'songDetail', path: '/ranking/songDetail/:topid', component: _songDetail2.default }, { path: '', redirect: { name: 'singer' } }]
 	});
 	var store = new _vuex2.default.Store({
 		state: { //单一状态树 唯一数据源
@@ -29230,7 +29234,7 @@
 	  }, [_c('mt-header', {
 	    attrs: {
 	      "fixed": "",
-	      "title": "这是title"
+	      "title": "音乐"
 	    }
 	  }, [_c('router-link', {
 	    attrs: {
@@ -29256,17 +29260,17 @@
 	    }
 	  }, [_c('router-link', {
 	    attrs: {
-	      "to": "/recommend"
+	      "to": "/singer"
 	    }
-	  }, [_vm._v("个性推荐")])], 1), _vm._v(" "), _c('mt-tab-item', {
+	  }, [_vm._v("歌手")])], 1), _vm._v(" "), _c('mt-tab-item', {
 	    attrs: {
 	      "id": "2"
 	    }
 	  }, [_c('router-link', {
 	    attrs: {
-	      "to": "/singer"
+	      "to": "/ranking"
 	    }
-	  }, [_vm._v("歌手")])], 1), _vm._v(" "), _c('mt-tab-item', {
+	  }, [_vm._v("排行榜")])], 1), _vm._v(" "), _c('mt-tab-item', {
 	    attrs: {
 	      "id": "3"
 	    }
@@ -29280,9 +29284,9 @@
 	    }
 	  }, [_c('router-link', {
 	    attrs: {
-	      "to": "/ranking"
+	      "to": "/recommend"
 	    }
-	  }, [_vm._v("排行榜")])], 1)], 1), _vm._v(" "), _c('banner-vue'), _vm._v(" "), _c('router-view'), _vm._v(" "), _c('play-vue', {
+	  }, [_vm._v("个性推荐")])], 1)], 1), _vm._v(" "), _c('banner-vue'), _vm._v(" "), _c('router-view'), _vm._v(" "), _c('play-vue', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -40156,7 +40160,7 @@
 
 	
 	/* styles */
-	__webpack_require__(283)
+	__webpack_require__(288)
 
 	var Component = __webpack_require__(188)(
 	  /* script */
@@ -40164,7 +40168,7 @@
 	  /* template */
 	  __webpack_require__(286),
 	  /* scopeId */
-	  null,
+	  "data-v-7b7fd38a",
 	  /* cssModules */
 	  null
 	)
@@ -40189,46 +40193,8 @@
 
 
 /***/ }),
-/* 283 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(284);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	if(content.locals) module.exports = content.locals;
-	// add the styles to the DOM
-	var update = __webpack_require__(186)("5e3ab36e", content, false);
-	// Hot Module Replacement
-	if(true) {
-	 // When the styles change, update the <style> tags
-	 if(!content.locals) {
-	   module.hot.accept(284, function() {
-	     var newContent = __webpack_require__(284);
-	     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-	     update(newContent);
-	   });
-	 }
-	 // When the module is disposed, remove the <style> tags
-	 module.hot.dispose(function() { update(); });
-	}
-
-/***/ }),
-/* 284 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(185)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\ndiv .mui-table-view .mui-media-object {\n\tline-height: 42px;\n\tmax-width: 130px;\n\theight: 130px;\n}\n.mui-table-view-cell{\n\twidth:33%;\n\tfloat:left;\n\ttext-align:center;\n}\n", ""]);
-
-	// exports
-
-
-/***/ }),
+/* 283 */,
+/* 284 */,
 /* 285 */
 /***/ (function(module, exports) {
 
@@ -40255,6 +40221,7 @@
 
 	var singetList = [{
 		name: "张惠妹",
+		href: "#/singer/list?name=张惠妹",
 		image: "http://p4.music.126.net/F9asgcj7C7qSl_je9XDvRw==/603631883675241.jpg?param=130y130"
 	}, {
 		name: "薛之谦",
@@ -40281,6 +40248,8 @@
 
 		methods: {
 			singerSong: function singerSong(name) {
+				// this.$router.push('/singer/list');
+				this.$router.push({ name: "singerList", params: { name: name } });
 				var data = {
 					method: "get",
 					url: " http://route.showapi.com/213-1?showapi_appid=35592&showapi_sign=beebc315c5d4467780ab5517eea5560a&keyword=" + name,
@@ -40317,7 +40286,7 @@
 	      }
 	    }, [_c('a', {
 	      attrs: {
-	        "href": "javascript:;"
+	        "href": "javascripe:void(0)"
 	      }
 	    }, [_c('img', {
 	      staticClass: "mui-media-object mui-pull-top",
@@ -40336,6 +40305,215 @@
 	     __webpack_require__(202).rerender("data-v-7b7fd38a", module.exports)
 	  }
 	}
+
+/***/ }),
+/* 287 */,
+/* 288 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(289);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	if(content.locals) module.exports = content.locals;
+	// add the styles to the DOM
+	var update = __webpack_require__(186)("7df14cc4", content, false);
+	// Hot Module Replacement
+	if(true) {
+	 // When the styles change, update the <style> tags
+	 if(!content.locals) {
+	   module.hot.accept(289, function() {
+	     var newContent = __webpack_require__(289);
+	     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+	     update(newContent);
+	   });
+	 }
+	 // When the module is disposed, remove the <style> tags
+	 module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 289 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(185)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\ndiv .mui-table-view .mui-media-object[data-v-7b7fd38a] {\n\tline-height: 42px;\n\tmax-width: 130px;\n\theight: 130px;\n}\n.mui-table-view-cell[data-v-7b7fd38a]{\n\twidth:33%;\n\tfloat:left;\n\ttext-align:center;\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 290 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	
+	/* styles */
+	__webpack_require__(295)
+
+	var Component = __webpack_require__(188)(
+	  /* script */
+	  __webpack_require__(293),
+	  /* template */
+	  __webpack_require__(294),
+	  /* scopeId */
+	  "data-v-79acbf70",
+	  /* cssModules */
+	  null
+	)
+	Component.options.__file = "E:\\learn\\课堂练习\\vue管理系统 - 副本\\src\\components\\singerList.vue"
+	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+	if (Component.options.functional) {console.error("[vue-loader] singerList.vue: functional components are not supported with templates, they should use render functions.")}
+
+	/* hot reload */
+	if (true) {(function () {
+	  var hotAPI = __webpack_require__(202)
+	  hotAPI.install(__webpack_require__(148), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-79acbf70", Component.options)
+	  } else {
+	    hotAPI.reload("data-v-79acbf70", Component.options)
+	  }
+	})()}
+
+	module.exports = Component.exports
+
+
+/***/ }),
+/* 291 */,
+/* 292 */,
+/* 293 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+		data: function data() {
+			return {
+				data: ""
+			};
+		},
+		beforeCreate: function beforeCreate() {
+			var _this = this;
+
+			var name = this.$route.params.name;
+			console.log(name);
+			var data = {
+				method: "get",
+				url: " http://route.showapi.com/213-1?showapi_appid=35592&showapi_sign=beebc315c5d4467780ab5517eea5560a&keyword=" + name,
+				data: {
+					keyword: name,
+					page: 1,
+					showapi_appid: '35592',
+					showapi_sign: "beebc315c5d4467780ab5517eea5560a",
+					topid: 3
+				}
+			};
+
+			this.$ajax(data).then(function (res) {
+				var data = res.data.showapi_res_body.pagebean.contentlist;
+				_this.data = data;
+				console.log(data);
+			});
+		},
+
+		methods: {}
+	};
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {}, [_c('div', {
+	    staticClass: "music-list"
+	  }, _vm._l((_vm.data), function(item, index) {
+	    return _c('div', {
+	      key: index,
+	      staticClass: "music-item"
+	    }, [_c('img', {
+	      staticClass: "music-img",
+	      attrs: {
+	        "src": item.albumpic_small
+	      }
+	    }), _vm._v(" "), _c('span', {
+	      staticClass: "music-name"
+	    }, [_c('span', {
+	      staticClass: "mui-badge mui-badge-danger"
+	    }, [_vm._v(_vm._s(index + 1))]), _vm._v(" . " + _vm._s(item.songname) + "-" + _vm._s(item.singername))]), _vm._v(" "), _c('span', {
+	      staticClass: "del-icon"
+	    })])
+	  }))])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (true) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     __webpack_require__(202).rerender("data-v-79acbf70", module.exports)
+	  }
+	}
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(296);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	if(content.locals) module.exports = content.locals;
+	// add the styles to the DOM
+	var update = __webpack_require__(186)("df3d09a2", content, false);
+	// Hot Module Replacement
+	if(true) {
+	 // When the styles change, update the <style> tags
+	 if(!content.locals) {
+	   module.hot.accept(296, function() {
+	     var newContent = __webpack_require__(296);
+	     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+	     update(newContent);
+	   });
+	 }
+	 // When the module is disposed, remove the <style> tags
+	 module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 296 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(185)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.music-list[data-v-79acbf70] {\n\t    padding-top: 4px;\n\t    padding-left: 4px;\n\t    padding-right: 4px;\n\t    -webkit-box-flex: 8;\n\t    -ms-flex: 8;\n\t    flex: 8;\n\t    overflow: auto;\n}\n.music-list .music-item[data-v-79acbf70] {\n\t    padding: 4px 6px 0;\n\t    position: relative;\n\t    margin-bottom: 4px;\n\t    border-radius: 5px;\n\t    cursor: pointer;\n\t    border: none;\n\t    border-top: 1px solid rgba(0,0,0,.1)\n}\n.music-list .music-item .music-img[data-v-79acbf70] {\n    width: 50px;\n    height: 50px;\n    border-radius: 5px;\n}\n.music-list .music-item .music-name[data-v-79acbf70]{\n\tdisplay: inline-block;\n\twidth: 65%;\n    vertical-align: top;\n    margin-top: 15px;\n    margin-left: 10px;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    cursor: pointer;\n    padding-bottom: 20px;\n}\n.footer[data-v-79acbf70]{\n\t    background: #26a2ff;\n\t    width: 100%;\n\t    height: 70px;\n\t    text-align: center;\n\t    position: fixed;\n\t    bottom: 0;\n\t    left:0;\n}\n.footer audio[data-v-79acbf70]{\n\t\twidth: 100%;\n\t\theight: 50px;\n\t\tdisplay: block;\n}\n\n", ""]);
+
+	// exports
+
 
 /***/ })
 /******/ ]);
