@@ -1,4 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
+ï»¿/******/ (function(modules) { // webpackBootstrap
 /******/ 	var parentHotUpdateCallback = this["webpackHotUpdate"];
 /******/ 	this["webpackHotUpdate"] = 
 /******/ 	function webpackHotUpdateCallback(chunkId, moreModules) { // eslint-disable-line no-unused-vars
@@ -8550,33 +8550,33 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//1.0 µ¼ÈëÏà¹Ø°ü
+	//1.0 å¯¼å…¥ç›¸å…³åŒ…
 	_vue2.default.use(_vueAxios2.default, _axios2.default);
 	_vue2.default.prototype.$ajax = _axios2.default;
 
-	//1.0.1 µ¼ÈëÏà¹Ø.vue×é¼ş
+	//1.0.1 å¯¼å…¥ç›¸å…³.vueç»„ä»¶
 
 
-	//1.0.2 µ¼ÈëmuiÏà¹ØµÄcss
+	//1.0.2 å¯¼å…¥muiç›¸å…³çš„css
 
 	_vue2.default.use(_mintUi2.default);
 
-	// //µ¼Èëmint-uiµÄcss
+	// //å¯¼å…¥mint-uiçš„css
 
 
-	//2.0 ÔÚVueÖĞ¼ÓÔØvueRouter 
+	//2.0 åœ¨Vueä¸­åŠ è½½vueRouter 
 	_vue2.default.use(_vueRouter2.default);
-	// Vue.use(vueResource);  //Ê¹ÓÃvueResource ¶ÔÏó²ÅÄÜ×Ô¶¯ÔÚVue¶ÔÏóÊµÀıÉÏ¹ÒÔÚÒ»¸ö$http
-	_vue2.default.use(_vuex2.default); // Vuex ½øĞĞ×´Ì¬¹ÜÀí
-	// ÓÃ axios ½øĞĞ Ajax ÇëÇó
+	// Vue.use(vueResource);  //ä½¿ç”¨vueResource å¯¹è±¡æ‰èƒ½è‡ªåŠ¨åœ¨Vueå¯¹è±¡å®ä¾‹ä¸ŠæŒ‚åœ¨ä¸€ä¸ª$http
+	_vue2.default.use(_vuex2.default); // Vuex è¿›è¡ŒçŠ¶æ€ç®¡ç†
+	// ç”¨ axios è¿›è¡Œ Ajax è¯·æ±‚
 
 
-	//3.0 ¶¨ÒåÂ·ÓÉ¹æÔò¶ÔÏó
+	//3.0 å®šä¹‰è·¯ç”±è§„åˆ™å¯¹è±¡
 	var router = new _vueRouter2.default({
 		routes: [{ name: 'ranking', path: '/ranking', component: _ranking2.default }, { name: 'singer', path: '/singer', component: _singer2.default }, { name: 'recommend', path: '/recommend', component: _recommend2.default }, { name: 'radioStation', path: '/radioStation', component: _radioStation2.default }, { name: 'songDetail', path: '/ranking/songDetail/:topid', component: _songDetail2.default }]
 	});
 	var store = new _vuex2.default.Store({
-		state: { //µ¥Ò»×´Ì¬Ê÷ Î¨Ò»Êı¾İÔ´
+		state: { //å•ä¸€çŠ¶æ€æ ‘ å”¯ä¸€æ•°æ®æº
 			list: [],
 			url: "http://route.showapi.com/213-4?showapi_appid=35592&showapi_sign=beebc315c5d4467780ab5517eea5560a&topid=",
 			info: {
@@ -8587,7 +8587,7 @@
 			isshow: false,
 			playInfo: "",
 			currentTime: 0,
-			playList: [], //²¥·ÅÁĞ±í
+			playList: [], //æ’­æ”¾åˆ—è¡¨
 			http: _vue2.default.axios
 		},
 		getters: {
@@ -8608,7 +8608,7 @@
 			}
 		},
 		mutations: {
-			//¸ü¸Ä Vuex µÄ store ÖĞµÄ×´Ì¬µÄÎ¨Ò»·½·¨ÊÇÌá½» mutation
+			//æ›´æ”¹ Vuex çš„ store ä¸­çš„çŠ¶æ€çš„å”¯ä¸€æ–¹æ³•æ˜¯æäº¤ mutation
 			addPlay: function addPlay(state, index) {
 				var playInfo = {};
 				playInfo.img = state.list[index].albumpic_small;
@@ -8620,7 +8620,7 @@
 				console.log(state.playList);
 				var flag = false;
 				state.playList.forEach(function (element, index) {
-					// ¼ì²â¸èÇúÖØ¸´
+					// æ£€æµ‹æ­Œæ›²é‡å¤
 					if (element.musicName == playInfo.musicName) {
 						flag = true;
 					}
@@ -8651,7 +8651,7 @@
 			}
 		}
 	});
-	//4.0 Ê¹ÓÃrouter
+	//4.0 ä½¿ç”¨router
 	new _vue2.default({
 		el: '#app',
 		store: store,
@@ -18291,7 +18291,7 @@
 	        installMessageChannelImplementation();
 
 	    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-	        // For IE 6¨C8
+	        // For IE 6â€“8
 	        installReadyStateChangeImplementation();
 
 	    } else {
@@ -25009,7 +25009,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\App.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\App.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -25639,7 +25639,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\banner.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\banner.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] banner.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -26001,7 +26001,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\play.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\play.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] play.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -26136,8 +26136,8 @@
 				var cal = function cal() {
 					document.querySelector('.showlist').style.display = 'none';
 				};
-				var mask = _muiMin2.default.createMask(cal); //callbackÎªÓÃ»§µã»÷ÃÉ°æÊ±×Ô¶¯Ö´ĞĞµÄ»Øµ÷;
-				mask.show(); //ÏÔÊ¾ÕÚÕÖ
+				var mask = _muiMin2.default.createMask(cal); //callbackä¸ºç”¨æˆ·ç‚¹å‡»è’™ç‰ˆæ—¶è‡ªåŠ¨æ‰§è¡Œçš„å›è°ƒ;
+				mask.show(); //æ˜¾ç¤ºé®ç½©
 
 			}
 		},
@@ -26190,7 +26190,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\list.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\list.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] list.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -26313,7 +26313,7 @@
 	    staticClass: "title"
 	  }, [_c('div', {
 	    staticClass: "playlist"
-	  }, [_vm._v("²¥·ÅÁĞ±í£¨" + _vm._s(_vm.playList.length) + "£©")]), _vm._v(" "), _c('div', {
+	  }, [_vm._v("æ’­æ”¾åˆ—è¡¨ï¼ˆ" + _vm._s(_vm.playList.length) + "ï¼‰")]), _vm._v(" "), _c('div', {
 	    staticClass: "clear",
 	    on: {
 	      "click": function($event) {
@@ -26322,7 +26322,7 @@
 	    }
 	  }, [_c('div', {
 	    staticClass: "mui-icon mui-icon-trash"
-	  }), _vm._v("Çå¿Õ")])]), _vm._v(" "), _c('ul', {
+	  }), _vm._v("æ¸…ç©º")])]), _vm._v(" "), _c('ul', {
 	    staticClass: "mui-table-view"
 	  }, _vm._l((_vm.playList), function(item, index) {
 	    return _c('li', {
@@ -27080,7 +27080,7 @@
 	    } }), a.__back__first = null, a.addBack({ name: "5+", index: 10, handle: function handle() {
 	      if (!b.plus) return !1;var c = plus.webview.currentWebview(),
 	          d = c.parent();return d ? d.evalJS("mui&&mui.back();") : c.canBack(function (d) {
-	        d.canBack ? b.history.back() : c.id === plus.runtime.appid ? a.__back__first ? new Date().getTime() - a.__back__first < 2e3 && plus.runtime.quit() : (a.__back__first = new Date().getTime(), mui.toast("ÔÙ°´Ò»´ÎÍË³öÓ¦ÓÃ"), setTimeout(function () {
+	        d.canBack ? b.history.back() : c.id === plus.runtime.appid ? a.__back__first ? new Date().getTime() - a.__back__first < 2e3 && plus.runtime.quit() : (a.__back__first = new Date().getTime(), mui.toast("å†æŒ‰ä¸€æ¬¡é€€å‡ºåº”ç”¨"), setTimeout(function () {
 	          a.__back__first = null;
 	        }, 2e3)) : c.preload ? c.hide("auto") : a.closeAll(c);
 	      }), !0;
@@ -27282,7 +27282,7 @@
 	      t = g + " " + l + " " + m,
 	      u = ['<div class="' + f + '">', '<div class="{icon}"></div>', '<div class="' + h + '">{contentrefresh}</div>', "</div>"].join(""),
 	      v = { init: function init(b, c) {
-	      this._super(b, a.extend(!0, { scrollY: !0, scrollX: !1, indicators: !0, deceleration: .003, down: { height: 50, contentinit: "ÏÂÀ­¿ÉÒÔË¢ĞÂ", contentdown: "ÏÂÀ­¿ÉÒÔË¢ĞÂ", contentover: "ÊÍ·ÅÁ¢¼´Ë¢ĞÂ", contentrefresh: "ÕıÔÚË¢ĞÂ..." }, up: { height: 50, auto: !1, contentinit: "ÉÏÀ­ÏÔÊ¾¸ü¶à", contentdown: "ÉÏÀ­ÏÔÊ¾¸ü¶à", contentrefresh: "ÕıÔÚ¼ÓÔØ...", contentnomore: "Ã»ÓĞ¸ü¶àÊı¾İÁË", duration: 300 } }, c));
+	      this._super(b, a.extend(!0, { scrollY: !0, scrollX: !1, indicators: !0, deceleration: .003, down: { height: 50, contentinit: "ä¸‹æ‹‰å¯ä»¥åˆ·æ–°", contentdown: "ä¸‹æ‹‰å¯ä»¥åˆ·æ–°", contentover: "é‡Šæ”¾ç«‹å³åˆ·æ–°", contentrefresh: "æ­£åœ¨åˆ·æ–°..." }, up: { height: 50, auto: !1, contentinit: "ä¸Šæ‹‰æ˜¾ç¤ºæ›´å¤š", contentdown: "ä¸Šæ‹‰æ˜¾ç¤ºæ›´å¤š", contentrefresh: "æ­£åœ¨åŠ è½½...", contentnomore: "æ²¡æœ‰æ›´å¤šæ•°æ®äº†", duration: 300 } }, c));
 	    }, _init: function _init() {
 	      this._super(), this._initPocket();
 	    }, _initPulldownRefresh: function _initPulldownRefresh() {
@@ -28174,7 +28174,7 @@
 	}(mui, window, document), function (a, b) {
 	  a.alert = function (c, d, e, f) {
 	    if (a.os.plus) {
-	      if ("undefined" == typeof c) return;"function" == typeof d ? (f = d, d = null, e = "È·¶¨") : "function" == typeof e && (f = e, e = null), a.plusReady(function () {
+	      if ("undefined" == typeof c) return;"function" == typeof d ? (f = d, d = null, e = "ç¡®å®š") : "function" == typeof e && (f = e, e = null), a.plusReady(function () {
 	        plus.nativeUI.alert(c, f, d, e);
 	      });
 	    } else b.alert(c);
@@ -28261,13 +28261,13 @@
 	      } }), n;
 	  },
 	      v = function v(b, c, d, e, f) {
-	    return "undefined" != typeof b ? ("function" == typeof c ? (e = c, f = d, c = null, d = null) : "function" == typeof d && (f = e, e = d, d = null), a.os.plus && "div" !== f ? plus.nativeUI.alert(b, e, c || "ÌáÊ¾", d || "È·¶¨") : u(s(b, c || "ÌáÊ¾") + t([d || "È·¶¨"]), e)) : void 0;
+	    return "undefined" != typeof b ? ("function" == typeof c ? (e = c, f = d, c = null, d = null) : "function" == typeof d && (f = e, e = d, d = null), a.os.plus && "div" !== f ? plus.nativeUI.alert(b, e, c || "æç¤º", d || "ç¡®å®š") : u(s(b, c || "æç¤º") + t([d || "ç¡®å®š"]), e)) : void 0;
 	  },
 	      w = function w(b, c, d, e, f) {
-	    return "undefined" != typeof b ? ("function" == typeof c ? (e = c, f = d, c = null, d = null) : "function" == typeof d && (f = e, e = d, d = null), a.os.plus && "div" !== f ? plus.nativeUI.confirm(b, e, c, d || ["È¡Ïû", "È·ÈÏ"]) : u(s(b, c || "ÌáÊ¾") + t(d || ["È¡Ïû", "È·ÈÏ"]), e)) : void 0;
+	    return "undefined" != typeof b ? ("function" == typeof c ? (e = c, f = d, c = null, d = null) : "function" == typeof d && (f = e, e = d, d = null), a.os.plus && "div" !== f ? plus.nativeUI.confirm(b, e, c, d || ["å–æ¶ˆ", "ç¡®è®¤"]) : u(s(b, c || "æç¤º") + t(d || ["å–æ¶ˆ", "ç¡®è®¤"]), e)) : void 0;
 	  },
 	      x = function x(b, c, d, e, f, g) {
-	    return "undefined" != typeof b ? ("function" == typeof c ? (f = c, g = d, c = null, d = null, e = null) : "function" == typeof d ? (f = d, g = e, d = null, e = null) : "function" == typeof e && (g = f, f = e, e = null), a.os.plus && "div" !== g ? plus.nativeUI.prompt(b, f, d || "ÌáÊ¾", c, e || ["È¡Ïû", "È·ÈÏ"]) : u(s(b, d || "ÌáÊ¾", r(c)) + t(e || ["È¡Ïû", "È·ÈÏ"]), f)) : void 0;
+	    return "undefined" != typeof b ? ("function" == typeof c ? (f = c, g = d, c = null, d = null, e = null) : "function" == typeof d ? (f = d, g = e, d = null, e = null) : "function" == typeof e && (g = f, f = e, e = null), a.os.plus && "div" !== g ? plus.nativeUI.prompt(b, f, d || "æç¤º", c, e || ["å–æ¶ˆ", "ç¡®è®¤"]) : u(s(b, d || "æç¤º", r(c)) + t(e || ["å–æ¶ˆ", "ç¡®è®¤"]), f)) : void 0;
 	  },
 	      y = function y() {
 	    return p.length ? (p[p.length - 1].close(), !0) : !1;
@@ -28438,7 +28438,7 @@
 	    var b = a.match(c);return b && 5 === b.length ? [b[1], b[2], b[3], b[4]] : [];
 	  },
 	      e = function e(b, c) {
-	    this.element = b, this.options = a.extend({ top: 0, offset: 150, duration: 16 }, c || {}), this._style = this.element.style, this._bgColor = this._style.backgroundColor;var e = d(mui.getStyles(this.element, "backgroundColor"));if (!e.length) throw new Error("ÔªËØ±³¾°ÑÕÉ«±ØĞëÎªRGBA");this._R = e[0], this._G = e[1], this._B = e[2], this._A = e[3], this._bufferFn = a.buffer(this.handleScroll, this.options.duration, this), this.initEvent();
+	    this.element = b, this.options = a.extend({ top: 0, offset: 150, duration: 16 }, c || {}), this._style = this.element.style, this._bgColor = this._style.backgroundColor;var e = d(mui.getStyles(this.element, "backgroundColor"));if (!e.length) throw new Error("å…ƒç´ èƒŒæ™¯é¢œè‰²å¿…é¡»ä¸ºRGBA");this._R = e[0], this._G = e[1], this._B = e[2], this._A = e[3], this._bufferFn = a.buffer(this.handleScroll, this.options.duration, this), this.initEvent();
 	  };e.prototype.initEvent = function () {
 	    b.addEventListener("scroll", this._bufferFn), b.addEventListener(a.EVENT_MOVE, this._bufferFn);
 	  }, e.prototype.handleScroll = function () {
@@ -28465,7 +28465,7 @@
 	      g = ".mui-btn-numbox-minus,.mui-numbox-btn-minus",
 	      h = ".mui-input-numbox,.mui-numbox-input",
 	      i = a.Numbox = a.Class.extend({ init: function init(b, c) {
-	      var d = this;if (!b) throw "¹¹Ôì numbox Ê±È±ÉÙÈİÆ÷ÔªËØ";d.holder = b, c = c || {}, c.step = parseInt(c.step || 1), d.options = c, d.input = a.qsa(h, d.holder)[0], d.plus = a.qsa(f, d.holder)[0], d.minus = a.qsa(g, d.holder)[0], d.checkValue(), d.initEvent();
+	      var d = this;if (!b) throw "æ„é€  numbox æ—¶ç¼ºå°‘å®¹å™¨å…ƒç´ ";d.holder = b, c = c || {}, c.step = parseInt(c.step || 1), d.options = c, d.input = a.qsa(h, d.holder)[0], d.plus = a.qsa(f, d.holder)[0], d.minus = a.qsa(g, d.holder)[0], d.checkValue(), d.initEvent();
 	    }, initEvent: function initEvent() {
 	      var b = this;b.plus.addEventListener(c, function (c) {
 	        var e = parseInt(b.input.value) + b.options.step;b.input.value = e.toString(), a.trigger(b.input, d, null);
@@ -29230,7 +29230,7 @@
 	  }, [_c('mt-header', {
 	    attrs: {
 	      "fixed": "",
-	      "title": "ÕâÊÇtitle"
+	      "title": "è¿™æ˜¯title"
 	    }
 	  }, [_c('router-link', {
 	    attrs: {
@@ -29242,7 +29242,7 @@
 	    attrs: {
 	      "icon": "back"
 	    }
-	  }, [_vm._v("·µ»Ø")])], 1), _vm._v("\n\t\t\t\tvueÁ·Ï°\n\t\t\t")], 1)], 1), _vm._v(" "), _c('mt-navbar', {
+	  }, [_vm._v("è¿”å›")])], 1), _vm._v("\n\t\t\t\tvueç»ƒä¹ \n\t\t\t")], 1)], 1), _vm._v(" "), _c('mt-navbar', {
 	    model: {
 	      value: (_vm.selected),
 	      callback: function($$v) {
@@ -29258,7 +29258,7 @@
 	    attrs: {
 	      "to": "/recommend"
 	    }
-	  }, [_vm._v("¸öĞÔÍÆ¼ö")])], 1), _vm._v(" "), _c('mt-tab-item', {
+	  }, [_vm._v("ä¸ªæ€§æ¨è")])], 1), _vm._v(" "), _c('mt-tab-item', {
 	    attrs: {
 	      "id": "2"
 	    }
@@ -29266,7 +29266,7 @@
 	    attrs: {
 	      "to": "/singer"
 	    }
-	  }, [_vm._v("¸èÊÖ")])], 1), _vm._v(" "), _c('mt-tab-item', {
+	  }, [_vm._v("æ­Œæ‰‹")])], 1), _vm._v(" "), _c('mt-tab-item', {
 	    attrs: {
 	      "id": "3"
 	    }
@@ -29274,7 +29274,7 @@
 	    attrs: {
 	      "to": "/radioStation"
 	    }
-	  }, [_vm._v("Ö÷²¥µçÌ¨")])], 1), _vm._v(" "), _c('mt-tab-item', {
+	  }, [_vm._v("ä¸»æ’­ç”µå°")])], 1), _vm._v(" "), _c('mt-tab-item', {
 	    attrs: {
 	      "id": "4"
 	    }
@@ -29282,7 +29282,7 @@
 	    attrs: {
 	      "to": "/ranking"
 	    }
-	  }, [_vm._v("ÅÅĞĞ°ñ")])], 1)], 1), _vm._v(" "), _c('banner-vue'), _vm._v(" "), _c('router-view'), _vm._v(" "), _c('play-vue', {
+	  }, [_vm._v("æ’è¡Œæ¦œ")])], 1)], 1), _vm._v(" "), _c('banner-vue'), _vm._v(" "), _c('router-view'), _vm._v(" "), _c('play-vue', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -29317,7 +29317,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\ranking.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\ranking.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] ranking.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -29403,23 +29403,23 @@
 		data: function data() {
 			return {
 				ranks: [{
-					title: "Å·ÃÀ",
+					title: "æ¬§ç¾",
 					img: "",
 					src: "/ranking/songDetail/3"
 				}, {
-					title: "ÄÚµØ",
+					title: "å†…åœ°",
 					img: "",
 					src: "/ranking/songDetail/5"
 				}, {
-					title: "º«¹ú",
+					title: "éŸ©å›½",
 					img: "",
 					src: "/ranking/songDetail/16"
 				}, {
-					title: "ÈÕ±¾",
+					title: "æ—¥æœ¬",
 					img: "",
 					src: "/ranking/songDetail/17"
 				}, {
-					title: "¸ÛÌ¨",
+					title: "æ¸¯å°",
 					img: "",
 					src: "/ranking/songDetail/6"
 				}]
@@ -29484,7 +29484,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\recommend.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\recommend.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] recommend.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -29599,7 +29599,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\radioStation.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\radioStation.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] radioStation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -29714,7 +29714,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\songDetail.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\songDetail.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] songDetail.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -29806,14 +29806,14 @@
 			this.$store.dispatch('getData', topid);
 		},
 		created: function created() {
-			//±íÊ¾.vue×é¼ş´´½¨Íê±ÏÒÔºó£¬²¢ÇÒÒÑ¾­½«dataÖĞºÍmethodsÖĞµÄËùÓĞÊôĞÔºÍ·½·¨¶¼ÒÑ¾­³õÊ¼»¯Íê±ÏÁË
+			//è¡¨ç¤º.vueç»„ä»¶åˆ›å»ºå®Œæ¯•ä»¥åï¼Œå¹¶ä¸”å·²ç»å°†dataä¸­å’Œmethodsä¸­çš„æ‰€æœ‰å±æ€§å’Œæ–¹æ³•éƒ½å·²ç»åˆå§‹åŒ–å®Œæ¯•äº†
 			this.getData();
 		},
 
 		methods: {
 			getData: function getData() {},
 			addPlay: function addPlay(index) {
-				console.log("Ö´ĞĞÒ»´Î");
+				console.log("æ‰§è¡Œä¸€æ¬¡");
 				this.$store.commit('addPlay', index);
 			}
 		},
@@ -29858,7 +29858,7 @@
 	      staticClass: "music-name"
 	    }, [_c('span', {
 	      staticClass: "mui-badge mui-badge-danger"
-	    }, [_vm._v(_vm._s(index + 1))]), _vm._v("?.?" + _vm._s(item.songname) + "-" + _vm._s(item.singername))]), _vm._v(" "), _c('span', {
+	    }, [_vm._v(_vm._s(index + 1))]), _vm._v("Â .Â " + _vm._s(item.songname) + "-" + _vm._s(item.singername))]), _vm._v(" "), _c('span', {
 	      staticClass: "del-icon"
 	    })])
 	  }))])
@@ -30828,8 +30828,8 @@
 
 	      this._opening = true;
 
-	      // Ê¹ÓÃ vue-popup µÄ×é¼ş£¬Èç¹ûĞèÒªºÍ¸¸×é¼şÍ¨ĞÅÏÔÊ¾µÄ×´Ì¬£¬Ó¦¸ÃÊ¹ÓÃ value£¬ËüÊÇÒ»¸ö prop£¬
-	      // ÕâÑùÔÚ¸¸×é¼şÖĞÓÃ v-model ¼´¿É£»·ñÔò¿ÉÒÔÊ¹ÓÃ visible£¬ËüÊÇÒ»¸ö data
+	      // ä½¿ç”¨ vue-popup çš„ç»„ä»¶ï¼Œå¦‚æœéœ€è¦å’Œçˆ¶ç»„ä»¶é€šä¿¡æ˜¾ç¤ºçš„çŠ¶æ€ï¼Œåº”è¯¥ä½¿ç”¨ valueï¼Œå®ƒæ˜¯ä¸€ä¸ª propï¼Œ
+	      // è¿™æ ·åœ¨çˆ¶ç»„ä»¶ä¸­ç”¨ v-model å³å¯ï¼›å¦åˆ™å¯ä»¥ä½¿ç”¨ visibleï¼Œå®ƒæ˜¯ä¸€ä¸ª data
 	      this.visible = true;
 	      this.$emit('input', true);
 
@@ -30980,7 +30980,7 @@
 	"use strict";
 	/**
 	 * v-clickoutside
-	 * @desc µã»÷ÔªËØÍâÃæ²Å»á´¥·¢µÄÊÂ¼ş
+	 * @desc ç‚¹å‡»å…ƒç´ å¤–é¢æ‰ä¼šè§¦å‘çš„äº‹ä»¶
 	 * @example
 	 * ```vue
 	 * <div v-element-clickoutside="handleClose">
@@ -31334,7 +31334,7 @@
 
 	    cancelText: {
 	      type: String,
-	      default: 'È¡Ïû'
+	      default: 'å–æ¶ˆ'
 	    },
 
 	    actions: {
@@ -31397,13 +31397,13 @@
 	/**
 	 * mt-badge
 	 * @module components/badge
-	 * @desc »ÕÕÂ
-	 * @param {string} [type=primary] ×é¼şÑùÊ½£¬¿ÉÑ¡ primary, error, success, warning
-	 * @param {string} [color] - ´«ÈëÑÕÉ«Öµ
-	 * @param {string} [size=normal] - ³ß´ç£¬½ÓÊÜ normal, small, large
+	 * @desc å¾½ç« 
+	 * @param {string} [type=primary] ç»„ä»¶æ ·å¼ï¼Œå¯é€‰ primary, error, success, warning
+	 * @param {string} [color] - ä¼ å…¥é¢œè‰²å€¼
+	 * @param {string} [size=normal] - å°ºå¯¸ï¼Œæ¥å— normal, small, large
 	 *
 	 * @example
-	 * <mt-badge color="error">´íÎó</mt-badge>
+	 * <mt-badge color="error">é”™è¯¯</mt-badge>
 	 * <mt-badge color="#333">30</mt-badge>
 	 */
 	/* harmony default export */ exports["default"] = {
@@ -31456,18 +31456,18 @@
 	/**
 	 * mt-header
 	 * @module components/button
-	 * @desc °´Å¥
-	 * @param {string} [type=default] - ÏÔÊ¾ÀàĞÍ£¬½ÓÊÜ default, primary, danger
-	 * @param {boolean} [disabled=false] - ½ûÓÃ
-	 * @param {boolean} [plain=false] - ÓÄÁé°´Å¥
-	 * @param {string} [size=normal] - ³ß´ç£¬½ÓÊÜ normal, small, large
-	 * @param {string} [native-type] - Ô­Éú type ÊôĞÔ
-	 * @param {string} [icon] - Í¼±ê£¬Ìá¹© more, back£¬»òÕß×Ô¶¨ÒåµÄÍ¼±ê£¨´«Èë²»´øÇ°×ºµÄÍ¼±êÀàÃû£¬×îºóÆ´½Ó³É .mintui-xxx£©
-	 * @param {slot} - ÏÔÊ¾ÎÄ±¾
-	 * @param {slot} [icon] ÏÔÊ¾Í¼±ê
+	 * @desc æŒ‰é’®
+	 * @param {string} [type=default] - æ˜¾ç¤ºç±»å‹ï¼Œæ¥å— default, primary, danger
+	 * @param {boolean} [disabled=false] - ç¦ç”¨
+	 * @param {boolean} [plain=false] - å¹½çµæŒ‰é’®
+	 * @param {string} [size=normal] - å°ºå¯¸ï¼Œæ¥å— normal, small, large
+	 * @param {string} [native-type] - åŸç”Ÿ type å±æ€§
+	 * @param {string} [icon] - å›¾æ ‡ï¼Œæä¾› more, backï¼Œæˆ–è€…è‡ªå®šä¹‰çš„å›¾æ ‡ï¼ˆä¼ å…¥ä¸å¸¦å‰ç¼€çš„å›¾æ ‡ç±»åï¼Œæœ€åæ‹¼æ¥æˆ .mintui-xxxï¼‰
+	 * @param {slot} - æ˜¾ç¤ºæ–‡æœ¬
+	 * @param {slot} [icon] æ˜¾ç¤ºå›¾æ ‡
 	 *
 	 * @example
-	 * <mt-button size="large" icon="back" type="primary">°´Å¥</mt-button>
+	 * <mt-button size="large" icon="back" type="primary">æŒ‰é’®</mt-button>
 	 */
 	/* harmony default export */ exports["default"] = {
 	  name: 'mt-button',
@@ -31579,7 +31579,7 @@
 
 	/**
 	 * mt-cell-swipe
-	 * @desc ÀàËÆ iOS »¬¶¯ Cell µÄĞ§¹û
+	 * @desc ç±»ä¼¼ iOS æ»‘åŠ¨ Cell çš„æ•ˆæœ
 	 * @module components/cell-swipe
 	 *
 	 * @example
@@ -31771,21 +31771,21 @@
 	/**
 	 * mt-cell
 	 * @module components/cell
-	 * @desc µ¥Ôª¸ñ
-	 * @param {string|Object} [to] - Ìø×ªÁ´½Ó£¬Ê¹ÓÃ vue-router µÄÇé¿öÏÂ to »á´«µİ¸ø router.push£¬·ñÔò×÷Îª a ±êÇ©µÄ href ÊôĞÔ´¦Àí
-	 * @param {string} [icon] - Í¼±ê£¬Ìá¹© more, back£¬»òÕß×Ô¶¨ÒåµÄÍ¼±ê£¨´«Èë²»´øÇ°×ºµÄÍ¼±êÀàÃû£¬×îºóÆ´½Ó³É .mintui-xxx£©
-	 * @param {string} [title] - ±êÌâ
-	 * @param {string} [label] - ±¸×¢ĞÅÏ¢
-	 * @param {boolean} [is-link=false] - ¿Éµã»÷µÄÁ´½Ó
-	 * @param {string} [value] - ÓÒ²àÏÔÊ¾ÎÄ×Ö
-	 * @param {slot} - Í¬ value, »á¸²¸Ç value ÊôĞÔ
-	 * @param {slot} [title] - Í¬ title, »á¸²¸Ç title ÊôĞÔ
-	 * @param {slot} [icon] - Í¬ icon, »á¸²¸Ç icon ÊôĞÔ£¬ÀıÈç¿ÉÒÔ´«ÈëÍ¼Æ¬
+	 * @desc å•å…ƒæ ¼
+	 * @param {string|Object} [to] - è·³è½¬é“¾æ¥ï¼Œä½¿ç”¨ vue-router çš„æƒ…å†µä¸‹ to ä¼šä¼ é€’ç»™ router.pushï¼Œå¦åˆ™ä½œä¸º a æ ‡ç­¾çš„ href å±æ€§å¤„ç†
+	 * @param {string} [icon] - å›¾æ ‡ï¼Œæä¾› more, backï¼Œæˆ–è€…è‡ªå®šä¹‰çš„å›¾æ ‡ï¼ˆä¼ å…¥ä¸å¸¦å‰ç¼€çš„å›¾æ ‡ç±»åï¼Œæœ€åæ‹¼æ¥æˆ .mintui-xxxï¼‰
+	 * @param {string} [title] - æ ‡é¢˜
+	 * @param {string} [label] - å¤‡æ³¨ä¿¡æ¯
+	 * @param {boolean} [is-link=false] - å¯ç‚¹å‡»çš„é“¾æ¥
+	 * @param {string} [value] - å³ä¾§æ˜¾ç¤ºæ–‡å­—
+	 * @param {slot} - åŒ value, ä¼šè¦†ç›– value å±æ€§
+	 * @param {slot} [title] - åŒ title, ä¼šè¦†ç›– title å±æ€§
+	 * @param {slot} [icon] - åŒ icon, ä¼šè¦†ç›– icon å±æ€§ï¼Œä¾‹å¦‚å¯ä»¥ä¼ å…¥å›¾ç‰‡
 	 *
 	 * @example
-	 * <mt-cell title="±êÌâÎÄ×Ö" icon="back" is-link value="ÃèÊöÎÄ×Ö"></mt-cell>
-	 * <mt-cell title="±êÌâÎÄ×Ö" icon="back">
-	 *   <div slot="value">ÃèÊöÎÄ×Ö°¡¹ş</div>
+	 * <mt-cell title="æ ‡é¢˜æ–‡å­—" icon="back" is-link value="æè¿°æ–‡å­—"></mt-cell>
+	 * <mt-cell title="æ ‡é¢˜æ–‡å­—" icon="back">
+	 *   <div slot="value">æè¿°æ–‡å­—å•Šå“ˆ</div>
 	 * </mt-cell>
 	 */
 	/* harmony default export */ exports["default"] = {
@@ -31865,13 +31865,13 @@
 	/**
 	 * mt-checklist
 	 * @module components/checklist
-	 * @desc ¸´Ñ¡¿òÁĞ±í£¬ÒÀÀµ cell ×é¼ş
+	 * @desc å¤é€‰æ¡†åˆ—è¡¨ï¼Œä¾èµ– cell ç»„ä»¶
 	 *
-	 * @param {(string[]|object[])} options - Ñ¡ÏîÊı×é£¬¿ÉÒÔ´«Èë [{label: 'label', value: 'value', disabled: true}] »òÕß ['ab', 'cd', 'ef']
-	 * @param {string[]} value - Ñ¡ÖĞÖµµÄÊı×é
-	 * @param {string} title - ±êÌâ
-	 * @param {number} [max] - ×î¶à¿ÉÑ¡µÄ¸öÊı
-	 * @param {string} [align=left] - checkbox ¶ÔÆëÎ»ÖÃ£¬`left`, `right`
+	 * @param {(string[]|object[])} options - é€‰é¡¹æ•°ç»„ï¼Œå¯ä»¥ä¼ å…¥ [{label: 'label', value: 'value', disabled: true}] æˆ–è€… ['ab', 'cd', 'ef']
+	 * @param {string[]} value - é€‰ä¸­å€¼çš„æ•°ç»„
+	 * @param {string} title - æ ‡é¢˜
+	 * @param {number} [max] - æœ€å¤šå¯é€‰çš„ä¸ªæ•°
+	 * @param {string} [align=left] - checkbox å¯¹é½ä½ç½®ï¼Œ`left`, `right`
 	 *
 	 *
 	 * @example
@@ -31998,11 +31998,11 @@
 	  props: {
 	    cancelText: {
 	      type: String,
-	      default: 'È¡Ïû'
+	      default: 'å–æ¶ˆ'
 	    },
 	    confirmText: {
 	      type: String,
-	      default: 'È·¶¨'
+	      default: 'ç¡®å®š'
 	    },
 	    type: {
 	      type: String,
@@ -32429,22 +32429,22 @@
 
 	/**
 	 * mt-field
-	 * @desc ±à¼­Æ÷£¬ÒÀÀµ cell
+	 * @desc ç¼–è¾‘å™¨ï¼Œä¾èµ– cell
 	 * @module components/field
 	 *
-	 * @param {string} [type=text] - field ÀàĞÍ£¬½ÓÊÜ text, textarea µÈ
-	 * @param {string} [label] - ±êÇ©
-	 * @param {string} [rows] - textarea µÄ rows
+	 * @param {string} [type=text] - field ç±»å‹ï¼Œæ¥å— text, textarea ç­‰
+	 * @param {string} [label] - æ ‡ç­¾
+	 * @param {string} [rows] - textarea çš„ rows
 	 * @param {string} [placeholder] - placeholder
 	 * @param {string} [disabled] - disabled
 	 * @param {string} [readonly] - readonly
-	 * @param {string} [state] - ±íµ¥Ğ£Ñé×´Ì¬ÑùÊ½£¬½ÓÊÜ error, warning, success
+	 * @param {string} [state] - è¡¨å•æ ¡éªŒçŠ¶æ€æ ·å¼ï¼Œæ¥å— error, warning, success
 	 *
 	 * @example
-	 * <mt-field v-model="value" label="ÓÃ»§Ãû"></mt-field>
-	 * <mt-field v-model="value" label="ÃÜÂë" placeholder="ÇëÊäÈëÃÜÂë"></mt-field>
-	 * <mt-field v-model="value" label="×ÔÎÒ½éÉÜ" placeholder="×ÔÎÒ½éÉÜ" type="textarea" rows="4"></mt-field>
-	 * <mt-field v-model="value" label="ÓÊÏä" placeholder="³É¹¦×´Ì¬" state="success"></mt-field>
+	 * <mt-field v-model="value" label="ç”¨æˆ·å"></mt-field>
+	 * <mt-field v-model="value" label="å¯†ç " placeholder="è¯·è¾“å…¥å¯†ç "></mt-field>
+	 * <mt-field v-model="value" label="è‡ªæˆ‘ä»‹ç»" placeholder="è‡ªæˆ‘ä»‹ç»" type="textarea" rows="4"></mt-field>
+	 * <mt-field v-model="value" label="é‚®ç®±" placeholder="æˆåŠŸçŠ¶æ€" state="success"></mt-field>
 	 */
 	/* harmony default export */ exports["default"] = {
 	  name: 'mt-field',
@@ -32547,15 +32547,15 @@
 	/**
 	 * mt-header
 	 * @module components/header
-	 * @desc ¶¥²¿µ¼º½
-	 * @param {boolean} [fixed=false] - ¹Ì¶¨¶¥²¿
-	 * @param {string} [title] - ±êÌâ
-	 * @param {slot} [left] - ÏÔÊ¾ÔÚ×ó²àÇøÓò
-	 * @param {slot} [right] - ÏÔÊ¾ÔÚÓÒ²àÇøÓò
+	 * @desc é¡¶éƒ¨å¯¼èˆª
+	 * @param {boolean} [fixed=false] - å›ºå®šé¡¶éƒ¨
+	 * @param {string} [title] - æ ‡é¢˜
+	 * @param {slot} [left] - æ˜¾ç¤ºåœ¨å·¦ä¾§åŒºåŸŸ
+	 * @param {slot} [right] - æ˜¾ç¤ºåœ¨å³ä¾§åŒºåŸŸ
 	 *
 	 * @example
-	 * <mt-header title="ÎÒÊÇ±êÌâ" fixed>
-	 *   <mt-button slot="left" icon="back" @click="handleBack">·µ»Ø</mt-button>
+	 * <mt-header title="æˆ‘æ˜¯æ ‡é¢˜" fixed>
+	 *   <mt-button slot="left" icon="back" @click="handleBack">è¿”å›</mt-button>
 	 *   <mt-button slot="right" icon="more"></mt-button>
 	 * </mt-header>
 	 */
@@ -33008,15 +33008,15 @@
 	    },
 	    topPullText: {
 	      type: String,
-	      default: 'ÏÂÀ­Ë¢ĞÂ'
+	      default: 'ä¸‹æ‹‰åˆ·æ–°'
 	    },
 	    topDropText: {
 	      type: String,
-	      default: 'ÊÍ·Å¸üĞÂ'
+	      default: 'é‡Šæ”¾æ›´æ–°'
 	    },
 	    topLoadingText: {
 	      type: String,
-	      default: '¼ÓÔØÖĞ...'
+	      default: 'åŠ è½½ä¸­...'
 	    },
 	    topDistance: {
 	      type: Number,
@@ -33027,15 +33027,15 @@
 	    },
 	    bottomPullText: {
 	      type: String,
-	      default: 'ÉÏÀ­Ë¢ĞÂ'
+	      default: 'ä¸Šæ‹‰åˆ·æ–°'
 	    },
 	    bottomDropText: {
 	      type: String,
-	      default: 'ÊÍ·Å¸üĞÂ'
+	      default: 'é‡Šæ”¾æ›´æ–°'
 	    },
 	    bottomLoadingText: {
 	      type: String,
-	      default: '¼ÓÔØÖĞ...'
+	      default: 'åŠ è½½ä¸­...'
 	    },
 	    bottomDistance: {
 	      type: Number,
@@ -33444,8 +33444,8 @@
 	//
 	//
 
-	var CONFIRM_TEXT = 'È·¶¨';
-	var CANCEL_TEXT = 'È¡Ïû';
+	var CONFIRM_TEXT = 'ç¡®å®š';
+	var CANCEL_TEXT = 'å–æ¶ˆ';
 
 
 
@@ -33530,7 +33530,7 @@
 	      if (this.$type === 'prompt') {
 	        var inputPattern = this.inputPattern;
 	        if (inputPattern && !inputPattern.test(this.inputValue || '')) {
-	          this.editorErrorMessage = this.inputErrorMessage || 'ÊäÈëµÄÊı¾İ²»ºÏ·¨!';
+	          this.editorErrorMessage = this.inputErrorMessage || 'è¾“å…¥çš„æ•°æ®ä¸åˆæ³•!';
 	          this.$refs.input.classList.add('invalid');
 	          return false;
 	        }
@@ -33538,7 +33538,7 @@
 	        if (typeof inputValidator === 'function') {
 	          var validateResult = inputValidator(this.inputValue);
 	          if (validateResult === false) {
-	            this.editorErrorMessage = this.inputErrorMessage || 'ÊäÈëµÄÊı¾İ²»ºÏ·¨!';
+	            this.editorErrorMessage = this.inputErrorMessage || 'è¾“å…¥çš„æ•°æ®ä¸åˆæ³•!';
 	            this.$refs.input.classList.add('invalid');
 	            return false;
 	          }
@@ -33625,21 +33625,21 @@
 	/**
 	 * mt-navbar
 	 * @module components/navbar
-	 * @desc ¶¥²¿ tab£¬ÒÀÀµ tab-item
+	 * @desc é¡¶éƒ¨ tabï¼Œä¾èµ– tab-item
 	 *
-	 * @param {boolean} [fixed=false] - ¹Ì¶¨µ×²¿
-	 * @param {*} selected - ·µ»Ø item component ´«ÈëµÄ value
+	 * @param {boolean} [fixed=false] - å›ºå®šåº•éƒ¨
+	 * @param {*} selected - è¿”å› item component ä¼ å…¥çš„ value
 	 *
 	 * @example
 	 * <mt-navbar :selected.sync="selected">
-	 *   <mt-tab-item value="¶©µ¥">
-	 *     <span slot="label">¶©µ¥</span>
+	 *   <mt-tab-item value="è®¢å•">
+	 *     <span slot="label">è®¢å•</span>
 	 *   </mt-tab-item>
 	 * </mt-navbar>
 	 *
 	 * <mt-navbar :selected.sync="selected" fixed>
-	 *   <mt-tab-item :value="['´«ÈëÊı×é', 'Ò²ÊÇ¿ÉÒÔµÄ']">
-	 *     <span slot="label">¶©µ¥</span>
+	 *   <mt-tab-item :value="['ä¼ å…¥æ•°ç»„', 'ä¹Ÿæ˜¯å¯ä»¥çš„']">
+	 *     <span slot="label">è®¢å•</span>
 	 *   </mt-tab-item>
 	 * </mt-navbar>
 	 *
@@ -33678,8 +33678,8 @@
 
 	  data: function() {
 	    return {
-	      transforming: false,    // ÊÇ·ñÕıÔÚÖ´ĞĞ¶¯»­
-	      expanded: false           // ÊÇ·ñÒÑ¾­Õ¹¿ª×Ó°´Å¥
+	      transforming: false,    // æ˜¯å¦æ­£åœ¨æ‰§è¡ŒåŠ¨ç”»
+	      expanded: false           // æ˜¯å¦å·²ç»å±•å¼€å­æŒ‰é’®
 	    };
 	  },
 
@@ -33690,13 +33690,13 @@
 	    },
 
 	    offset: {
-	      type: Number,           // ÉÈÃæÆ«ÒÆ½Ç£¬Ä¬ÈÏÊÇËÄ·ÖÖ®¦Ğ£¬ÅäºÏÄ¬ÈÏ·½Ïòlt
+	      type: Number,           // æ‰‡é¢åç§»è§’ï¼Œé»˜è®¤æ˜¯å››åˆ†ä¹‹Ï€ï¼Œé…åˆé»˜è®¤æ–¹å‘lt
 	      default: Math.PI / 4
 	    },
 
 	    direction: {
 	      type: String,
-	      default: 'lt'           // lt t rt this.radius rb b lb l È¡ÖµÓĞ8¸ö·½Ïò£¬×óÉÏ¡¢ÉÏ¡¢ÓÒÉÏ¡¢ÓÒ¡¢ÓÒÏÂ¡¢ÏÂ¡¢×óÏÂ¡¢×ó£¬Ä¬ÈÏÎª×óÉÏ
+	      default: 'lt'           // lt t rt this.radius rb b lb l å–å€¼æœ‰8ä¸ªæ–¹å‘ï¼Œå·¦ä¸Šã€ä¸Šã€å³ä¸Šã€å³ã€å³ä¸‹ã€ä¸‹ã€å·¦ä¸‹ã€å·¦ï¼Œé»˜è®¤ä¸ºå·¦ä¸Š
 	    },
 
 	    radius: {
@@ -33705,7 +33705,7 @@
 	    },
 
 	    mainButtonStyle: {
-	      type: String,           // Ó¦ÓÃµ½ mint-main-button ÉÏµÄ class
+	      type: String,           // åº”ç”¨åˆ° mint-main-button ä¸Šçš„ class
 	      default: ''
 	    }
 	  },
@@ -34718,12 +34718,12 @@
 	/**
 	 * mt-radio
 	 * @module components/radio
-	 * @desc µ¥Ñ¡¿òÁĞ±í£¬ÒÀÀµ cell ×é¼ş
+	 * @desc å•é€‰æ¡†åˆ—è¡¨ï¼Œä¾èµ– cell ç»„ä»¶
 	 *
-	 * @param {string[], object[]} options - Ñ¡ÏîÊı×é£¬¿ÉÒÔ´«Èë [{label: 'label', value: 'value', disabled: true}] »òÕß ['ab', 'cd', 'ef']
-	 * @param {string} value - Ñ¡ÖĞÖµ
-	 * @param {string} title - ±êÌâ
-	 * @param {string} [align=left] - checkbox ¶ÔÆëÎ»ÖÃ£¬`left`, `right`
+	 * @param {string[], object[]} options - é€‰é¡¹æ•°ç»„ï¼Œå¯ä»¥ä¼ å…¥ [{label: 'label', value: 'value', disabled: true}] æˆ–è€… ['ab', 'cd', 'ef']
+	 * @param {string} value - é€‰ä¸­å€¼
+	 * @param {string} title - æ ‡é¢˜
+	 * @param {string} [align=left] - checkbox å¯¹é½ä½ç½®ï¼Œ`left`, `right`
 	 *
 	 * @example
 	 * <mt-radio v-model="value" :options="['a', 'b', 'c']"></mt-radio>
@@ -34988,14 +34988,14 @@
 	/**
 	 * mt-search
 	 * @module components/search
-	 * @desc ËÑË÷¿ò
-	 * @param {string} value - °ó¶¨Öµ
-	 * @param {string} [cancel-text=È¡Ïû] - È¡Ïû°´Å¥ÎÄ×Ö
-	 * @param {string} [placeholder=È¡Ïû] - ËÑË÷¿òÕ¼Î»ÄÚÈİ
-	 * @param {boolean} [autofocus=false] - ×Ô¶¯ focus
-	 * @param {boolean} [show=false] - Ê¼ÖÕÏÔÊ¾ÁĞ±í
-	 * @param {string[]} [result] - ½á¹ûÁĞ±í
-	 * @param {slot} ½á¹ûÁĞ±í
+	 * @desc æœç´¢æ¡†
+	 * @param {string} value - ç»‘å®šå€¼
+	 * @param {string} [cancel-text=å–æ¶ˆ] - å–æ¶ˆæŒ‰é’®æ–‡å­—
+	 * @param {string} [placeholder=å–æ¶ˆ] - æœç´¢æ¡†å ä½å†…å®¹
+	 * @param {boolean} [autofocus=false] - è‡ªåŠ¨ focus
+	 * @param {boolean} [show=false] - å§‹ç»ˆæ˜¾ç¤ºåˆ—è¡¨
+	 * @param {string[]} [result] - ç»“æœåˆ—è¡¨
+	 * @param {slot} ç»“æœåˆ—è¡¨
 	 *
 	 * @example
 	 * <mt-search :value.sync="value" :result.sync="result"></mt-search>
@@ -35030,10 +35030,10 @@
 	    autofocus: Boolean,
 	    show: Boolean,
 	    cancelText: {
-	      default: 'È¡Ïû'
+	      default: 'å–æ¶ˆ'
 	    },
 	    placeholder: {
-	      default: 'ËÑË÷'
+	      default: 'æœç´¢'
 	    },
 	    result: Array
 	  },
@@ -35080,10 +35080,10 @@
 	/**
 	 * mt-spinner
 	 * @module components/spinner
-	 * @desc ¼ÓÔØ¶¯»­
-	 * @param {(string|number)} [type=snake] - ÏÔÊ¾ÀàĞÍ£¬´«ÈëÀàĞÍÃû»òÕßÀàĞÍ id£¬¿ÉÑ¡ `snake`, `dobule-bounce`, `triple-bounce`, `fading-circle`
-	 * @param {number} size - ³ß´ç
-	 * @param {string} color - ÑÕÉ«
+	 * @desc åŠ è½½åŠ¨ç”»
+	 * @param {(string|number)} [type=snake] - æ˜¾ç¤ºç±»å‹ï¼Œä¼ å…¥ç±»å‹åæˆ–è€…ç±»å‹ idï¼Œå¯é€‰ `snake`, `dobule-bounce`, `triple-bounce`, `fading-circle`
+	 * @param {number} size - å°ºå¯¸
+	 * @param {string} color - é¢œè‰²
 	 *
 	 * @example
 	 * <mt-spinner type="snake"></mt-spinner>
@@ -35890,9 +35890,9 @@
 	/**
 	 * mt-switch
 	 * @module components/switch
-	 * @desc ÇĞ»»°´Å¥
-	 * @param {boolean} [value] - °ó¶¨Öµ£¬Ö§³ÖË«Ïò°ó¶¨
-	 * @param {slot} - ÏÔÊ¾ÄÚÈİ
+	 * @desc åˆ‡æ¢æŒ‰é’®
+	 * @param {boolean} [value] - ç»‘å®šå€¼ï¼Œæ”¯æŒåŒå‘ç»‘å®š
+	 * @param {slot} - æ˜¾ç¤ºå†…å®¹
 	 *
 	 * @example
 	 * <mt-switch v-model="value"></mt-switch>
@@ -35937,16 +35937,16 @@
 
 	/**
 	 * mt-tab-container-item
-	 * @desc ´îÅä tab-container Ê¹ÓÃ
+	 * @desc æ­é… tab-container ä½¿ç”¨
 	 * @module components/tab-container-item
 	 *
-	 * @param {number|string} [id] - ¸ÃÏîµÄ id
+	 * @param {number|string} [id] - è¯¥é¡¹çš„ id
 	 *
 	 * @example
 	 * <mt-tab-container v-model="selected">
-	 *   <mt-tab-container-item id="1"> ÄÚÈİA </mt-tab-container-item>
-	 *   <mt-tab-container-item id="2"> ÄÚÈİB </mt-tab-container-item>
-	 *   <mt-tab-container-item id="3"> ÄÚÈİC </mt-tab-container-item>
+	 *   <mt-tab-container-item id="1"> å†…å®¹A </mt-tab-container-item>
+	 *   <mt-tab-container-item id="2"> å†…å®¹B </mt-tab-container-item>
+	 *   <mt-tab-container-item id="3"> å†…å®¹C </mt-tab-container-item>
 	 * </mt-tab-container>
 	 */
 	/* harmony default export */ exports["default"] = {
@@ -36005,16 +36005,16 @@
 
 	/**
 	 * mt-tab-container
-	 * @desc Ãæ°å£¬´îÅä tab-container-item Ê¹ÓÃ
+	 * @desc é¢æ¿ï¼Œæ­é… tab-container-item ä½¿ç”¨
 	 * @module components/tab-container
 	 *
-	 * @param {number|string} [value] - µ±Ç°¼¤»îµÄ tabId
+	 * @param {number|string} [value] - å½“å‰æ¿€æ´»çš„ tabId
 	 *
 	 * @example
 	 * <mt-tab-container v-model="selected">
-	 *   <mt-tab-container-item id="1"> ÄÚÈİA </mt-tab-container-item>
-	 *   <mt-tab-container-item id="2"> ÄÚÈİB </mt-tab-container-item>
-	 *   <mt-tab-container-item id="3"> ÄÚÈİC </mt-tab-container-item>
+	 *   <mt-tab-container-item id="1"> å†…å®¹A </mt-tab-container-item>
+	 *   <mt-tab-container-item id="2"> å†…å®¹B </mt-tab-container-item>
+	 *   <mt-tab-container-item id="3"> å†…å®¹C </mt-tab-container-item>
 	 * </mt-tab-container>
 	 */
 	/* harmony default export */ exports["default"] = {
@@ -36167,15 +36167,15 @@
 	/**
 	 * mt-tab-item
 	 * @module components/tab-item
-	 * @desc ´îÅä tabbar »ò navbar Ê¹ÓÃ
-	 * @param {*} id - Ñ¡ÖĞºóµÄ·µ»ØÖµ£¬ÈÎÒâÀàĞÍ
-	 * @param {slot} [icon] - icon Í¼±ê
-	 * @param {slot} - ÎÄ×Ö
+	 * @desc æ­é… tabbar æˆ– navbar ä½¿ç”¨
+	 * @param {*} id - é€‰ä¸­åçš„è¿”å›å€¼ï¼Œä»»æ„ç±»å‹
+	 * @param {slot} [icon] - icon å›¾æ ‡
+	 * @param {slot} - æ–‡å­—
 	 *
 	 * @example
 	 * <mt-tab-item>
 	 *   <img slot="icon" src="http://placehold.it/100x100">
-	 *   ¶©µ¥
+	 *   è®¢å•
 	 * </mt-tab-item>
 	 */
 	/* harmony default export */ exports["default"] = {
@@ -36203,22 +36203,22 @@
 	/**
 	 * mt-tabbar
 	 * @module components/tabbar
-	 * @desc µ×²¿ tab£¬ÒÀÀµ tab-item
-	 * @param {boolean} [fixed=false] - ¹Ì¶¨µ×²¿
-	 * @param {*} value - ·µ»Ø item component ´«ÈëµÄ id
+	 * @desc åº•éƒ¨ tabï¼Œä¾èµ– tab-item
+	 * @param {boolean} [fixed=false] - å›ºå®šåº•éƒ¨
+	 * @param {*} value - è¿”å› item component ä¼ å…¥çš„ id
 	 *
 	 * @example
 	 * <mt-tabbar v-model="selected">
-	 *   <mt-tab-item id="¶©µ¥">
+	 *   <mt-tab-item id="è®¢å•">
 	 *     <img slot="icon" src="http://placehold.it/100x100">
-	 *     <span slot="label">¶©µ¥</span>
+	 *     <span slot="label">è®¢å•</span>
 	 *   </mt-tab-item>
 	 * </mt-tabbar>
 	 *
 	 * <mt-tabbar v-model="selected" fixed>
-	 *   <mt-tab-item :id="['´«ÈëÊı×é', 'Ò²ÊÇ¿ÉÒÔµÄ']">
+	 *   <mt-tab-item :id="['ä¼ å…¥æ•°ç»„', 'ä¹Ÿæ˜¯å¯ä»¥çš„']">
 	 *     <img slot="icon" src="http://placehold.it/100x100">
-	 *     <span slot="label">¶©µ¥</span>
+	 *     <span slot="label">è®¢å•</span>
 	 *   </mt-tab-item>
 	 * </mt-tabbar>
 	 */
@@ -36808,11 +36808,11 @@
 	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__message_box_vue__ = __webpack_require__(141);
 	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__message_box_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__message_box_vue__);
 	/* unused harmony export MessageBox */
-	var CONFIRM_TEXT = 'È·¶¨';
-	var CANCEL_TEXT = 'È¡Ïû';
+	var CONFIRM_TEXT = 'ç¡®å®š';
+	var CANCEL_TEXT = 'å–æ¶ˆ';
 
 	var defaults = {
-	  title: 'ÌáÊ¾',
+	  title: 'æç¤º',
 	  message: '',
 	  type: '',
 	  showInput: false,
@@ -40059,7 +40059,7 @@
 	 * raf.js
 	 * https://github.com/ngryman/raf.js
 	 *
-	 * original requestAnimationFrame polyfill by Erik M?ller
+	 * original requestAnimationFrame polyfill by Erik MÃ¶ller
 	 * inspired from paul_irish gist and post
 	 *
 	 * Copyright (c) 2013 ngryman
@@ -40168,7 +40168,7 @@
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\learn\\¿ÎÌÃÁ·Ï°\\vue¹ÜÀíÏµÍ³ - ¸±±¾\\src\\components\\singer.vue"
+	Component.options.__file = "E:\\learn\\è¯¾å ‚ç»ƒä¹ \\vueç®¡ç†ç³»ç»Ÿ - å‰¯æœ¬\\src\\components\\singer.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] singer.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -40254,23 +40254,23 @@
 	//
 
 	var singetList = [{
-		name: "ÕÅ»İÃÃ",
+		name: "å¼ æƒ å¦¹",
 		image: "http://p4.music.126.net/F9asgcj7C7qSl_je9XDvRw==/603631883675241.jpg?param=130y130"
 	}, {
-		name: "Ñ¦Ö®Ç«",
+		name: "è–›ä¹‹è°¦",
 		image: "http://p4.music.126.net/ULlwJ2drOfYv-f6-_7jGGQ==/3250156379592966.jpg?param=130y130"
 	}, {
 		image: "http://p3.music.126.net/1JG8Uwzb5XAJXaPUHR6RBw==/3238061747024716.jpg?param=130y130",
-		name: "ÕÅÑ§ÓÑ"
+		name: "å¼ å­¦å‹"
 	}, {
 		image: "http://p4.music.126.net/_d1scu7z_1dmd0Zgv9mTLA==/19165587183900212.jpg?param=130y130",
-		name: "³ÂŞÈÑ¸"
+		name: "é™ˆå¥•è¿…"
 	}, {
 		image: "http://p4.music.126.net/I6I81M7B7_hoeqp9VGg8sw==/568447511584754.jpg?param=130y130",
-		name: "ĞíÎ¡"
+		name: "è®¸å·"
 	}, {
 		image: "http://p4.music.126.net/Q4JSaV98wuU6xElATsFjAw==/3261151495434543.jpg?param=130y130",
-		name: "Ñî×ÚÎ³"
+		name: "æ¨å®—çº¬"
 	}];
 	exports.default = {
 		data: function data() {
